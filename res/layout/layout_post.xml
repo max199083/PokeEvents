@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    >
+
+    <TextView
+        android:id="@+id/postTitle"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:text="Start an event"
+        android:textAlignment="center"
+        android:background="@color/colorBattleRed"
+        android:textSize="20sp"
+
+        />
+    <RelativeLayout
+        android:layout_height="wrap_content"
+        android:layout_width="200dp"
+        android:background="@color/colorCaptureBlue"
+        android:layout_below="@+id/postTitle"
+        android:paddingTop="10dp"
+        android:paddingRight="10dp"
+        android:paddingLeft="10dp"
+
+        android:id="@+id/relativeLayout">
+
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Capture"
+            android:id="@+id/checkCapture"
+            android:layout_below="@+id/relativeLayout"
+            android:layout_alignParentLeft="true"
+            android:checked="false" />
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Capture"
+            android:id="@+id/checkBattle"
+            android:layout_below="@+id/relativeLayout"
+            android:layout_alignParentRight="true"
+            android:checked="false" />
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="datetime"
+            android:ems="10"
+            android:id="@+id/editText"
+            android:layout_below="@+id/checkCapture"
+            android:layout_centerHorizontal="true" />
+
+
+
+
+
+    </RelativeLayout>
+
+
+
+
+</RelativeLayout>
