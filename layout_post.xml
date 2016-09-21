@@ -32,8 +32,8 @@
             android:id="@+id/battleButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginRight="25dp"
-
+            android:layout_marginRight="20dp"
+            android:layout_marginEnd="20dp"
             android:checked="false"
             android:text="BATTLE"
             android:textStyle="bold"
@@ -43,7 +43,6 @@
             android:id="@+id/captureButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_toRightOf="@id/battleButton"
             android:checked="false"
             android:text="CAPTURE"
 
@@ -51,28 +50,50 @@
             android:textStyle="bold"
             android:textColor="@color/colorCaptureBlue"/>
     </RadioGroup>
+<RelativeLayout
+    android:layout_height="wrap_content"
+    android:layout_width="wrap_content"
+    android:id="@+id/eventTime"
+    android:layout_below="@id/eventType"
+    android:layout_centerHorizontal="true">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/date"
+        android:hint="date"
+        android:textSize="20sp"
+        android:textAlignment="center"
+        android:background="#50880000"
+        android:textColor="#FFFFFF"
+        android:textColorHint="#FFFFFF"
+        android:textStyle="bold"
+        android:padding="10dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginBottom="10dp" />
 
     <TextView
         android:layout_centerHorizontal="true"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/time"
-        android:layout_below="@id/eventType"
-        android:hint="Choose your event time"
+        android:layout_toEndOf="@id/date"
+        android:layout_toRightOf="@id/date"
+        android:hint="time"
         android:textSize="20sp"
         android:textAlignment="center"
-        android:background="#AA000000"
+        android:background="#50000088"
         android:textColor="#FFFFFF"
         android:textColorHint="#FFFFFF"
         android:textStyle="bold"
         android:padding="10dp"
         android:layout_marginBottom="10dp" />
-
+</RelativeLayout>
     <AutoCompleteTextView
         android:id="@+id/location"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/time"
+        android:layout_below="@id/eventTime"
         android:layout_centerHorizontal="true"
         android:hint="Input your event location..."
         android:textSize="20sp"
