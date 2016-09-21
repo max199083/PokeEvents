@@ -19,20 +19,21 @@
         android:layout_marginBottom="10dp"
         android:padding="10dp"/>
 
-    <RelativeLayout
+    <RadioGroup
         android:id="@+id/eventType"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/postTitle"
         android:layout_centerHorizontal="true"
-        android:layout_marginBottom="10dp">
+        android:layout_marginBottom="10dp"
+        android:orientation="horizontal">
 
         <RadioButton
             android:id="@+id/battleButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginRight="25dp"
-            android:onClick="onRadioButtonClicked"
+
             android:checked="false"
             android:text="BATTLE"
             android:textStyle="bold"
@@ -45,11 +46,11 @@
             android:layout_toRightOf="@id/battleButton"
             android:checked="false"
             android:text="CAPTURE"
-            android:onClick="onRadioButtonClicked"
+
             android:clickable="true"
             android:textStyle="bold"
             android:textColor="@color/colorCaptureBlue"/>
-    </RelativeLayout>
+    </RadioGroup>
 
     <TextView
         android:layout_centerHorizontal="true"
@@ -84,6 +85,5 @@
         android:layout_below="@id/location"
         android:layout_centerHorizontal="true"
         android:text="Create Event" />
-
 
 </RelativeLayout>
